@@ -1,15 +1,15 @@
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-			Text("Hi there")
-        }
-//		.foregroundColor(SwiftUI.Color.cyan)
+		HStack{
+			Image(systemName: "globe")
+				.imageScale(.large)
+				.foregroundColor(.accentColor)
+			Text("Hello World!")
+		}
+		.foregroundColor(.accentColor)
         .padding()
     }
 }
@@ -19,3 +19,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
