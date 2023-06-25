@@ -53,13 +53,3 @@ Checkpoint 1:
  Converts it to Fahrenheit by multiplying by 9, dividing by 5, then adding 32.
  Prints the result for the user, showing both the Celsius and Fahrenheit values.
 */
-
-let temp1_c: Double
-temp1_c = 71
-
-let temp1_f = (temp1_c * 9 ) / 5 + 32
-
-temp1_c
-temp1_f
-
-
