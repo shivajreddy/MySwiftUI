@@ -40,6 +40,6 @@ struct HomePageView: View {
 }
 
 
-#Preview {
-	HomePageView()
-}
+//#Preview {
+//	HomePageView()
+//}

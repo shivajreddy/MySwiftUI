@@ -12,6 +12,6 @@ struct CircleImage: View {
 }
 
 
-#Preview {
-	CircleImage()
-}
+//#Preview {
+//	CircleImage()
+//}

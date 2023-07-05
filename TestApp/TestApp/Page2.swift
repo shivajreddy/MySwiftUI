@@ -5,13 +5,19 @@ import SwiftUI
 struct PageView: View {
 	
 	var body: some View {
-		Text("Page2")
+        Form {
+            Text("Page2. Testing")
+            Text("Page2. Testing")
+        }
 	}
 	
 }
 
 
 
-#Preview {
-	PageView()
+struct Content_Previews: PreviewProvider{
+    static var previews: some View {
+        PageView()
+    }
 }
+
