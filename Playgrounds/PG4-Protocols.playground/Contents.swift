@@ -1,27 +1,37 @@
 // Protocols
-// Jul-6 2:51pm
+// Jul-7 9:00_AM
 
-protocol FirstProtocol {
-    // protocol definition goes here
-    var mustBeSettable: Int {get set}
+protocol MyProtocol {
+    var ppty1: Int {get set}
+    var ppty2: Int {get}
+    static var ppty3: Int {get set}
 }
 
-protocol SecondProtocol {
+struct MyStruct: MyProtocol {
+    var ppty1: Int
+    var ppty2: Int
+    static var ppty3: Int = -1
 }
 
 
-class SuperClass{
-    var x: Int = 0
-    var name: String = ""
+var s: MyStruct = MyStruct(ppty1: 88, ppty2: 99)
+s.ppty1 = 888
+s.ppty2 = 999
+s.ppty2 = 99
+
+
+class MyClass {
+    var x: Int
+    
+    init(){
+        self.x = 21
+    }
 }
 
-/*
-class SubClass: SuperClass, FirstProtocol, SecondProtocol{
-    var mustBeSettable: Int = 20
-}
-*/
+var c = MyClass()
+c.x
 
-struct MyStruct: FirstProtocol, SecondProtocol {
-    var mustBeSettable: Int = 20
+var computedVariable: String {
+    get{ print("getter called"); return ""}
+    set (newName) { }
 }
-

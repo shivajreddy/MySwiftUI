@@ -4,7 +4,7 @@ import SwiftUI
 struct Lecture1App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MyView()
         }
     }
 }
