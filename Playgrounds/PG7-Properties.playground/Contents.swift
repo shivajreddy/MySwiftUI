@@ -90,24 +90,94 @@ var square = Rect(
 )
 
 let initialSquareCenter = square.center
-print(initialSquareCenter)
+//print(initialSquareCenter)  //Point(x: 2.0, y: 2.0)
 
 square.center = Point(x: 7.0, y: 7.0)
-print(square.center)
-print(initialSquareCenter)
-
-
+//print(square.center)        // Point(x: 7.0, y: 7.0)
+//print(initialSquareCenter)  //Point(x: 2.0, y: 2.0)
 
 // Shorthand Getter, Shorthand Setter Declaration
+struct Rect2 {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get { Point (x: origin.x + (size.width / 2),    /// when returning a single expression
+                     y: origin.y + (size.height / 2))
+        }
+        set {
+            origin.x = newValue.x - (size.width / 2)    /// default name of `newValue` is used.
+            origin.y = newValue.y - (size.height / 2)
+        }
+    }
+}
 
 
 // Read-only computed properties
-
+/// Computed property with only a `getter` NOT a `setter` is a read-only computed ppty
+struct ReadOnlyPptyExample {
+    var readOnlyPpty1: String {
+        return "this is a read only"
+    }
+}
+var ro: ReadOnlyPptyExample = ReadOnlyPptyExample()
+///`ro.readOnlyPpty1 = "new data"`   ERROR: Cannot assign to property: 'readOnlyPpty1' is a get-only property
 
 // 3. Property Observers
+// willSet, didSet
+
+struct PropertyOwners {
+    
+    var count = 0
+    
+    var name: String = "default value"  {
+//        get { "Count: \(count)" } // CAN'T use a getter when using `wllSet` or `didSet` or both.
+        willSet {
+            print("name ppty willSet is called, aka going to store the value")
+        }
+        didSet{
+            print("did set is called, aka just stored a value")
+        }
+    }
+}
+
+var po1: PropertyOwners = PropertyOwners(name: "initial name")
+po1.name
+//po1.name = "updated name"   /// setting the value, so it calles `willSet` before setting and `didSet` after setting the value
+
+func someFunction(inst: inout PropertyOwners) -> Void {
+    let currentName = inst.name
+    inst.name = "updated name2"
+}
+someFunction(inst: &po1)
+//someFunction(inst: po1)
+po1.name
+
+func someFunc(x: Int, y: Int) -> Int{
+    return x + y
+}
+
+let a = 10, b = 20
+//print(someFunc(x: a, y: a))
 
 
+// TODO
 // 4. Property Wrappers
+struct TwelveOrLess {
+    var count: Int = 0
+    
+    var wrappedNumber: Int {
+        get {return count}
+        set { count += newValue }
+    }
+}
+
+var torl: TwelveOrLess = TwelveOrLess(count: 100)
+torl.wrappedNumber
+torl.wrappedNumber = 1
+torl.wrappedNumber
+torl.wrappedNumber = 1
+torl.wrappedNumber
+
 
 
 // 5. Global and local variables

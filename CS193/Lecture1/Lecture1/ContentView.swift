@@ -24,11 +24,11 @@ struct MyCard: View {
 }
 
 func updateGrid(){
-    
 }
 
 struct GameView: View {
     
+    /// min-grid size = 5 (index = 0), max-grid size = 10(index=5)
     @State private var gridSize: Int = 0
     
     var body: some View {
@@ -55,6 +55,8 @@ struct GameView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        GameView()
+            .preferredColorScheme(.dark)
         GameView()
     }
 }
