@@ -12,11 +12,12 @@ struct MyCard: View {
     var content: String = "🚀"
     //    @State var size: CardSize = CardSize(width: 50, height: 50)
     
-    var width: CGFloat { 60 }
-    var height: CGFloat { 100 }
+    var width: CGFloat { 90 }
+    var height: CGFloat { 120 }
     
     func handleClick() {
-        // Flip the card        isUp = !isUp
+        // Flip the card
+        isUp = !isUp
         print("Count = \(count). Card isUp: \(isUp)")
         count += 1
     }
@@ -28,7 +29,7 @@ struct MyCard: View {
         }
         .overlay( /// apply a rounded border
             RoundedRectangle(cornerRadius: 20)
-                .stroke(.blue, lineWidth: 8))
+                .stroke(.blue, lineWidth: 4) )
         .frame(maxWidth: width, maxHeight: height)
         .cornerRadius(20)
         .onTapGesture { handleClick() }
@@ -62,26 +63,21 @@ struct GameFormView: View {
     }
 }
 
+
 struct GameView: View {
     
     var body: some View {
         VStack{
             GameFormView()
-            HStack{
-                MyCard()
-                MyCard()
-                MyCard()
-                MyCard()
-                MyCard()
-                MyCard()
-                MyCard()
-                MyCard()
+            
+            HStack {
                 MyCard()
                 MyCard()
             }
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

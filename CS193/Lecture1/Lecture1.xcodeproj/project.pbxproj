@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1036313E2A5CEAB20070953A /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036313D2A5CEAB20070953A /* WrappingHStack.swift */; };
 		10927CC92A57302A008A2950 /* Lecture1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10927CC82A57302A008A2950 /* Lecture1App.swift */; };
 		10927CCB2A57302A008A2950 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10927CCA2A57302A008A2950 /* ContentView.swift */; };
 		10927CCD2A57302C008A2950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10927CCC2A57302C008A2950 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1036313D2A5CEAB20070953A /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
 		10927CC52A57302A008A2950 /* Lecture1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lecture1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10927CC82A57302A008A2950 /* Lecture1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture1App.swift; sourceTree = "<group>"; };
 		10927CCA2A57302A008A2950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				10927CC82A57302A008A2950 /* Lecture1App.swift */,
 				109B99302A589FAA009F7E52 /* AnotherFile.swift */,
 				10927CCA2A57302A008A2950 /* ContentView.swift */,
+				1036313D2A5CEAB20070953A /* WrappingHStack.swift */,
 				10927CCC2A57302C008A2950 /* Assets.xcassets */,
 				10927CCE2A57302C008A2950 /* Preview Content */,
 			);
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10927CCB2A57302A008A2950 /* ContentView.swift in Sources */,
+				1036313E2A5CEAB20070953A /* WrappingHStack.swift in Sources */,
 				10927CC92A57302A008A2950 /* Lecture1App.swift in Sources */,
 				109B99312A589FAA009F7E52 /* AnotherFile.swift in Sources */,
 			);
